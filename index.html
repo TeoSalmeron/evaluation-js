@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        ScrollReveal({mobile: false})
+    </script>
+</head>
+<body>
+    <!-- MAIN CONTAINER -->
+    <div class="container">
+        <!-- CONTENT -->
+        <div class="content">
+            <div class="player-container">
+                <!-- PLAYER 1 DIV -->
+                <div class="player-box player-box1">
+                    <div class="global-score sequenced">
+                        <div class="display-player-span">
+                            <span id="player-1-span" class="player-span">PLAYER 1</span>
+                        </div>
+                        <span id="player-1-global-score" class="player-global-score">0</span>
+                    </div>
+                    <div class="current-score sequenced">
+                        <span class="current-span">CURRENT</span>
+                        <span class="player-current-score" id="player-1-current-score">0</span>
+                    </div>
+                </div>
+                <hr>
+                <div class="dice sequenced" id="dice-container">
+                    <div class="dice-content" id="dice">
+                    </div>
+                </div>
+                <!-- PLAYER 2 DIV -->
+                <div class="player-box sequenced">
+                    <div class="global-score sequenced">
+                        <div class="display-player-span">
+                            <span id="player-2-span" class="player-span">PLAYER 2</span> 
+                        </div>
+                        <span id="player-2-global-score" class="player-global-score">0</span>
+                    </div>
+                    <div class="current-score sequenced">
+                        <span class="current-span">CURRENT</span>
+                        <span class="player-current-score" id="player-2-current-score">0</span>
+                    </div>
+                </div>
+            </div>
+            <!-- INTERACTIVE BOX -->
+            <div class="interactive-box sequenced">
+                <div class="button-wrapper">
+                    <div class="button-box">
+                        <button id="new-game"><img src="./img/plus.png" alt=""></button>
+                        <span>NEW GAME</span>
+                    </div>
+                    <div class="button-box">
+                        <button id="send-points"><img src="./img/log-in.png" alt=""></button>
+                        <span>HOLD ON</span>
+                    </div>
+                    <div class="button-box">
+                        <button id="roll-dice"><img src="./img/reload.png" alt=""></button>
+                        <span>RELOAD</span>
+                    </div>
+                </div>
+            </div>
+            <div class="winner-box" id="winner-box">
+                <span id="winner-name">LE JOUEUR <span id="winner-id"></span> A GAGNÉ</span>
+                <button id="replay" onclick="reloadPage()">REJOUER</button>
+            </div>
+        </div>
+    </div>
+    <script src="script/script.js"></script>
+</body>
+</html>
